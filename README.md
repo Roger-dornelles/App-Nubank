@@ -1,4 +1,4 @@
-                                                            CLONE DO APLICATIVO DA NUBANK   (todos os direitos ao NUBANK)
+                                      CLONE DO APLICATIVO DA NUBANK   (todos os direitos ao NUBANK)
             
  clone do aplicativo da nubank somente para estudos.
  Tecnologia usada para a construção do projeto foi o  REACT.JS 
