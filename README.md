@@ -1,4 +1,10 @@
 CLONE DO APLICATIVO DA NUBANK   (todos os direitos ao NUBANK) (EM DESENVOLVIMENTO)
+
+Hospedaddo na vercel.
+
+LINK:
+
+https://nubank-livid.vercel.app/
             
 clone do aplicativo da nubank somente para estudos.
 Tecnologia usada para a construção do projeto foi o  REACT.JS 
