@@ -17,7 +17,6 @@ const CreateAccount = ()=>{
 
     const onSubmit = (data)=>{
 
-        alert('ok')
         if(data){
             history.replace('/CreateEmail');
 
