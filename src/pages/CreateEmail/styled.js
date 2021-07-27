@@ -30,7 +30,7 @@ export const CreateEmailPage = styled.div`
                 margin:0 auto;
                 margin-top:75px;
                 margin-bottom:15px;
-                width:70%;
+                width:100%;
                 height:30px;
                 border:none;
                 border-bottom:1px solid #CCC;

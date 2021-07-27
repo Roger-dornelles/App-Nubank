@@ -18,6 +18,7 @@ import Demand from './pages/Demand';
 import Donation from './pages/Donation';
 import DonationInstitute from './pages/DonationInstitute';
 import DonationValue from './pages/DonationValue';
+import CreateName from './pages/CreateName';
 
 const Routes = ()=>{
     return (
@@ -41,6 +42,10 @@ const Routes = ()=>{
 
             <Route exact path="/CreatePassword">
                 <CreatePassword />
+            </Route>
+
+            <Route exact path="/CreateName">
+                <CreateName />
             </Route>
 
             <Route exact path="/Signin">

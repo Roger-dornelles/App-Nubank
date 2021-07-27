@@ -6,11 +6,15 @@ export const SchemaValidationCpf = Yup.object().shape({
 });
 
 export const SchemaValidationEmail = Yup.object().shape({
-    email:Yup.string().required('E-mail obrigatorio').email('Formato invalido')
+    email:Yup.string().required('E-mail obrigatorio').email('E-mail invalido')
 });
 
 export const SchemaValidationPassword = Yup.object().shape({
 
     password:Yup.string().required('Senha Obrigatoria').min(6,"minimo 6 caracters").max(20,'maximo 20 caracters')
-})
+});
+
+export const SchemaValidationName = Yup.object().shape({
+    name: Yup.string().required("Nome Obrigatorio").min(2, 'Nome precisa ter mais de 2 caracteres'),
+  });
 

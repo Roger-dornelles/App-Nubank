@@ -1,27 +1,53 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React,{useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import {CreatePage} from './styled';
 
+import {useDispatch} from 'react-redux';
+
+import api from '../../api';
+
 import { SchemaValidationCpf } from '../../components/Schema';
 
 const CreateAccount = ()=>{
     const history = useHistory();
+    const dispatch = useDispatch();
+    const [ alert ,setAlert ] = useState([]);
 
     const {register, handleSubmit, formState:{errors}} = useForm({
         resolver: yupResolver(SchemaValidationCpf)
 
     });
 
-    const onSubmit = (data)=>{
+    const onSubmit = async(data)=>{
 
-        if(data){
-            history.replace('/CreateEmail');
+     
+        const cpf = data.cpf;
+        const json = await api.consultCpf(cpf);
+        if(json.error){
+            setAlert(json.error);
+            setTimeout(()=>{
+                history.replace('/Signin')
+            },3000)
+            return;
+        };
 
-        }
+        dispatch({
+            type:'SET_CPF',
+            payload:{cpf:cpf}
+        });
+    
+        history.replace('/CreateEmail');
+            
+         
+
+
+
     };
+
 
     return (
         <CreatePage>
@@ -31,10 +57,12 @@ const CreateAccount = ()=>{
 
                 <form onSubmit={handleSubmit(onSubmit)}>
 
-                    <input type="text" placeholder="Cpf" {...register('cpf')} />
+                    <input type="text" placeholder="Cpf" cpf="data.cpf" {...register('cpf')} />
                     {errors &&
-                        <span>{errors.cpf?.message}</span>
+                        <span>{errors.cpf?.message}{alert}</span>
+                        
                     }
+                    
                     <button>Continuar</button>
                 </form>
 

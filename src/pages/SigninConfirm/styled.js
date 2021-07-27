@@ -15,32 +15,47 @@ export const SigninConfirmPage = styled.div`
             font-size:25px;
 
         }
-
-        input{
-            width:70%;
-            margin-top:120px;
-            font-size:19px;
-            text-align:center;
-            border:0;
-            border-bottom:1px solid #CCC;
-        }
-        a{
-            display:block;
-            margin:0 auto;
+        form{
             width:100%;
-            text-align:center;
-            padding:9px 5px;
-            background-color:#CC66F0;
-            color:black;
-            margin-top:230px;
-            border:0;
-            border-radius:8px;
-            font-size:22px;
-            text-decoration:none;
+            input{
+                width:100%;
+                margin-top:120px;
+                font-size:19px;
+                text-align:center;
+                border:0;
+                border-bottom:1px solid #CCC;
+                background-color:#FFFFFF;
+                outline:none;
 
-            &:hover{
-                box-shadow:5px 3px 5px #bbbbbb;
-                background-color:#c751ee;
+            }
+
+            span{
+                width:100%;
+                display:flex;
+                margin-top:5px;
+                justify-content:center;
+                background-color: #ff4045;
+            }
+            button{
+                cursor:pointer;
+                display:block;
+                margin:0 auto;
+                width:100%;
+                text-align:center;
+                padding:9px 5px;
+                background-color:#CC66F0;
+                color:black;
+                margin-top:230px;
+                border:0;
+                border-radius:8px;
+                font-size:22px;
+                text-decoration:none;
+               
+    
+                &:hover{
+                    box-shadow:5px 3px 5px #bbbbbb;
+                    background-color:#c751ee;
+                }
             }
         }
     }

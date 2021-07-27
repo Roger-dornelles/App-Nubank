@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import  { Link } from 'react-router-dom';
+import {useSelector} from 'react-redux';
 
 import { CardPage } from './styled';
 
@@ -17,6 +18,7 @@ import {
   } from "react-icons/fa";
 
 const Home = ()=>{
+    const name = useSelector(state=>state.usuario.name);
    const [warnings,setWarnings] =useState('');
    const [openMenu,setOpenMenu] = useState(false);
 
@@ -45,7 +47,7 @@ const Home = ()=>{
 
                     <div className="title">
                         <span><FaUserCircle /></span>
-                        <h3>Ola, Clientes</h3>
+                        <h3>Ola, {name}</h3>
                         <p>Disponivel em Conta <br/>
                             R$ 897,21
                         </p>

@@ -33,7 +33,7 @@ export const CreatePasswordPage = styled.div`
                 margin-bottom:15px;
             }
 
-            >span{
+            >span, p{
                 width:80%;
                 display:block;
                 background-color: rgb(255,0,0);
@@ -42,6 +42,8 @@ export const CreatePasswordPage = styled.div`
                 text-align: center;
 
             }
+
+          
 
             >button{
                 cursor: pointer;

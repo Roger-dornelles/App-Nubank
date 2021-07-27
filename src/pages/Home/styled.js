@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const CardPage = styled.div`
     display:flex;
     margin:0 auto;
-    height:98vh;
+    height:100%;
     background-color:#ebebeb;
 
     .container {
@@ -22,7 +22,8 @@ export const CardPage = styled.div`
             justify-content:space-between;
 
             .title{
-                padding:12px;
+                margin-top:17px;
+                padding:5px;
                 display:flex;
                 flex-direction:column;
                 
@@ -31,7 +32,7 @@ export const CardPage = styled.div`
                 }
                 p{
                     font-size:17px;
-                    line-height:25px;
+                    line-height:20px;
                 }
             }
             

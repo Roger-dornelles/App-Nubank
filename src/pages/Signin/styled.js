@@ -16,38 +16,48 @@ export const SigninPage = styled.div`
         h2{
             font-size:25px;
         }
+        form{
+            width:50%;
+            input{
+                width:100%;
+                margin-top:120px;
+                border:0;
+                border-bottom:1px solid #CCC;
+                font-size:19px;
+                text-align:center;
+                outline:0;
+            }
+            span{
+                display:flex;
+                justify-content:center;
+                width: 100%;
+                background-color: #f13636;
+               margin-top:5px;
+            }
     
-        input{
-            width:40%;
-            margin-top:120px;
-            border:0;
-            border-bottom:1px solid #CCC;
-            font-size:19px;
-            text-align:center;
-            outline:0;
-        }
-
-
-        a{
-            display:block;
-            margin:0 auto;
-            width:60%;
-            text-align:center;
-            padding:9px 5px;
-            background-color:#CC66F0;
-            color:black;
-            margin-top:30px;
-            border:0;
-            border-radius:8px;
-            font-size:22px;
-            text-decoration:none;
-
-            &:hover{
-                box-shadow:5px 3px 5px #bbbbbb;
-                background-color:#c751ee;
+            button{
+                cursor: pointer;
+                display:block;
+                margin:0 auto;
+                width:100%;
+                text-align:center;
+                padding:9px 5px;
+                background-color:#CC66F0;
+                color:black;
+                margin-top:100px;
+                border:0;
+                border-radius:8px;
+                font-size:22px;
+                text-decoration:none;
+    
+                &:hover{
+                    box-shadow:5px 3px 5px #bbbbbb;
+                    background-color:#c751ee;
+                }
             }
         }
         p{
+            margin-top: 50px;
             font-size:19px;
             display:flex;
             justify-content:center;
@@ -60,7 +70,8 @@ export const SigninPage = styled.div`
                 font-size:20px;
                 padding:0;
                 background-color:white;
-                margin-bottom: 31px;
+                margin-bottom: 3px;
+                margin-left: 5px;
                 text-align: left;
 
                  &:hover{
