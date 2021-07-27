@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import { useHistory } from 'react-router-dom';
 import  { Link } from 'react-router-dom';
 import {useSelector} from 'react-redux';
 
@@ -18,13 +19,19 @@ import {
   } from "react-icons/fa";
 
 const Home = ()=>{
-    const name = useSelector(state=>state.usuario.name);
-   const [warnings,setWarnings] =useState('');
-   const [openMenu,setOpenMenu] = useState(false);
+    const history = useHistory();
 
-   const handleOpenMenu = ()=>{
+    const name = useSelector(state=>state.usuario.name);
+
+    const [warnings,setWarnings] =useState('');
+    const [openMenu,setOpenMenu] = useState(false);
+        
+    const handleLogout = ()=>{
+       history.replace('/');
+    }
+    const handleOpenMenu = ()=>{
        setOpenMenu(true);
-   }
+    }
 
     const handleWarning = ()=>{
 
@@ -51,6 +58,7 @@ const Home = ()=>{
                         <p>Disponivel em Conta <br/>
                             R$ 897,21
                         </p>
+                        <button onClick={handleLogout}>Sair</button>
                     </div>
 
                     <div className="icons">

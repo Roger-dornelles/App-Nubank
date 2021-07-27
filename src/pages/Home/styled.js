@@ -34,6 +34,12 @@ export const CardPage = styled.div`
                     font-size:17px;
                     line-height:20px;
                 }
+                button{
+                    width:50%;
+                    border:none;
+                    background-color: #ebebeb;
+                    cursor:pointer;
+                }
             }
             
             .icons {
