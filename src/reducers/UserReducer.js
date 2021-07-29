@@ -6,7 +6,8 @@ const initialState = {
     cpf:'',
     email: '',
     password:'',
-    newCpf:''
+    newCpf:'',
+
 };
 
 const UserReducer = (state=initialState, action) => {
@@ -30,6 +31,9 @@ const UserReducer = (state=initialState, action) => {
         case 'REMENBER_CPF':
             return { ...state, newCpf: action.payload.newCpf};
         break;
+
+        case "USER_NAME":
+            return{ ...state,name:action.payload.userName}
     }
 
     return state;

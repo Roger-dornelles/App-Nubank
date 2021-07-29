@@ -1,5 +1,4 @@
 import React,{useState} from 'react';
-import { useHistory } from 'react-router-dom';
 import  { Link } from 'react-router-dom';
 import {useSelector} from 'react-redux';
 
@@ -18,16 +17,19 @@ import {
     FaTimes
   } from "react-icons/fa";
 
+  import {doLogout} from '../../helpers/AuthHandler';
+
 const Home = ()=>{
-    const history = useHistory();
 
     const name = useSelector(state=>state.usuario.name);
+    const newName = useSelector(state=>state.usuario.name);
 
     const [warnings,setWarnings] =useState('');
     const [openMenu,setOpenMenu] = useState(false);
         
     const handleLogout = ()=>{
-       history.replace('/');
+        doLogout();
+       window.location.href= '/'
     }
     const handleOpenMenu = ()=>{
        setOpenMenu(true);
@@ -54,7 +56,7 @@ const Home = ()=>{
 
                     <div className="title">
                         <span><FaUserCircle /></span>
-                        <h3>Ola, {name}</h3>
+                        <h3>Ola, {newName || name}</h3>
                         <p>Disponivel em Conta <br/>
                             R$ 897,21
                         </p>

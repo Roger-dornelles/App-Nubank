@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 
-
+import './App.css';
 // components
 import {Container} from '../src/components/ComponentsPartials';
 

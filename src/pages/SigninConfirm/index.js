@@ -1,18 +1,20 @@
 import React,{useState} from 'react';
 import {useSelector} from 'react-redux';
-import {useHistory} from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { SchemaValidationPassword } from '../../components/Schema';
+import {useDispatch} from 'react-redux';
 
 
 import { SigninConfirmPage } from './styled';
 
 import api from '../../api';
+import { doLogin } from '../../helpers/AuthHandler';
 
 
 const SigninConfirm = ()=>{
-    const history = useHistory();
+    const dispatch = useDispatch();
+
     const cpf = useSelector(state=>state.usuario.newCpf)
     const [ alert, setAlert ] = useState('');
 
@@ -21,16 +23,26 @@ const SigninConfirm = ()=>{
 
     });
 
-    const onSubmit = async(data)=>{
+    const onSubmit = async(data,e)=>{
+        e.preventDefault()
         const password = data.password;
         const json = await api.signin(password,cpf);
+        
 
         if(json.error){
             setAlert("Senha incorreta!");
             setTimeout(()=>{setAlert('')},2000)
             return;
         }
-       history.replace('/Home')
+
+        if(json){
+            doLogin(json.token);
+            dispatch({
+                type:'USER_NAME',
+                payload:{userName:json.name}
+            })
+            window.location.href = '/Home';
+        }
     
 
     }     

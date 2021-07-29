@@ -4,7 +4,7 @@ export const MainPage = styled.div`
     display:flex;
     align-items:center;
     width:100%;
-    height:98vh;
+    height:100vh;
     flex-direction:column;
     background-color: #BE6CE4;
     color:#000000;
@@ -27,15 +27,20 @@ export const MainPage = styled.div`
     a{
         display:flex;
         justify-content:center;
+        align-items:center;
         width:22%;
-        height:3%;
+        height:4%;
         background-color:white;
         color:black;
         border-radius:7px;
         font-size:19px;
         text-decoration:none;
         padding:5px 7px;
-        margin-top:25px;
+        margin-top:30px;
+
+        &:hover{
+            background-color:#f2f2f2;
+        }
     }
 
     @media screen and (max-width:1400px){

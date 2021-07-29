@@ -7,6 +7,7 @@ import { SchemaValidationName } from '../../components/Schema';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import api from '../../api';
+import { doLogin } from '../../helpers/AuthHandler';
 
 import {CreateNamePage} from './styled';
 
@@ -33,19 +34,22 @@ const CreateName = ()=>{
         }
 
         if(json.error){
-           
             setAlert("Ocorreu um erro tente mais tarde!!!");
             setTimeout(() =>{
                 history.replace('/')
             },2500)
         }
-        if(!json.error){
+        if(json){
+            for(let i in json) {
+                console.log('TOKEN: ',json[i].token)
 
+                doLogin(json[i].token);
+            }
             dispatch({
                 type:'SET_NAME',
                 payload: {name:newName}
             });
-            history.replace('/Home');
+            window.location.href = '/Home';
         }
     };
         

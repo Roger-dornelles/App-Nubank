@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const CardPage = styled.div`
     display:flex;
     margin:0 auto;
-    height:100%;
+    height:100vh;
     background-color:#ebebeb;
 
     .container {
@@ -34,7 +34,7 @@ export const CardPage = styled.div`
                     font-size:17px;
                     line-height:20px;
                 }
-                button{
+                > button{
                     width:50%;
                     border:none;
                     background-color: #ebebeb;
@@ -79,7 +79,7 @@ export const CardPage = styled.div`
                     span{
                         display:block;
                         font-size:17px;
-                        margin-top:-5px;
+                        margin-top:5px;
                         
                     }
                 }
