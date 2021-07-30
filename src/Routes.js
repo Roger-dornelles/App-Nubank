@@ -58,10 +58,7 @@ const Routes = ()=>{
             <Route exact path="/SigninConfirm">
                 <SigninConfirm />
             </Route>
-            
-            <Route path="/PageError">
-               <PageError />
-           </Route>
+        
             
            {logged && 
             <>
@@ -105,7 +102,9 @@ const Routes = ()=>{
                 </Route>
             </>
            }
-           
+            <Route>
+               <PageError />
+           </Route>
 
 
         </Switch>

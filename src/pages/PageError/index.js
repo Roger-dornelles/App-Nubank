@@ -5,7 +5,7 @@ const PageError = ()=>{
 
     return (
         <PageErrorArea>
-            <h2>Opsss!! Ocorreu um erro não achamos o que procura...</h2>
+            <h1>Opsss!! Ocorreu um erro não achamos o que procura...</h1>
         </PageErrorArea>
     )
 };
