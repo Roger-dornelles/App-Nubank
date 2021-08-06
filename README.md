@@ -4,7 +4,7 @@ Hospedaddo na vercel.
 
 LINK:
 
-https://nubank-livid.vercel.app/
+https://app-bank-miqv4n4ne-roger-dornelles.vercel.app
             
 clone do aplicativo da nubank somente para estudos.
 Tecnologia usada para a construção do projeto foi o  REACT.JS 
