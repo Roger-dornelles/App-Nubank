@@ -34,7 +34,11 @@ export const CardPage = styled.div`
                     
 
                     a{
-                        color: #fcfcfc;  
+                        color: #fcfcfc; 
+                        
+                        &:hover{
+                            color: #ebebeb;
+                        }
 
                     }
                 }
