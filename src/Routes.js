@@ -19,6 +19,7 @@ import Donation from './pages/Donation';
 import DonationInstitute from './pages/DonationInstitute';
 import DonationValue from './pages/DonationValue';
 import CreateName from './pages/CreateName';
+import UserInfo from './pages/UserInfo';
 import PageError from './pages/PageError';
 
 // helpers
@@ -100,6 +101,12 @@ const Routes = ()=>{
                 <Route exact path="/DonationValue">
                     <DonationValue />
                 </Route>
+  
+                <Route exact path="/UserInfo">
+                    <UserInfo />
+                </Route>
+
+                
             </>
            }
             <Route>

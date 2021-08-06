@@ -30,6 +30,13 @@ transform:translate(0%,30%);
     h2{
         margin-bottom:50px;
     }
+    .warning{
+        width:100%;
+        display: flex;
+        padding:3px 0;
+        justify-content:center;
+        background-color:#80ff80;
+    }
     .select{
         width:50%;
         text-align:left;

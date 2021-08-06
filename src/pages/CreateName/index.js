@@ -41,8 +41,6 @@ const CreateName = ()=>{
         }
         if(json){
             for(let i in json) {
-                console.log('TOKEN: ',json[i].token)
-
                 doLogin(json[i].token);
             }
             dispatch({

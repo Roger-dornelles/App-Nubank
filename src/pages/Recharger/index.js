@@ -14,7 +14,7 @@ const Recharger = ()=>{
     const handleConfirm = (e)=>{
         e.preventDefault();
         if(!value){
-            setWarning('Digite um valor para recarga!');
+            setWarning('Digite o numero do celular!');
             setTimeout(() => {setWarning('')},2000)
             return;
         }

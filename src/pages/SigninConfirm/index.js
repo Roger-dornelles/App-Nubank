@@ -40,6 +40,10 @@ const SigninConfirm = ()=>{
             dispatch({
                 type:'USER_NAME',
                 payload:{userName:json.name}
+            });
+            dispatch({
+                type:'CONFIRM_PASS',
+                payload:{password:data.password}
             })
             window.location.href = '/Home';
         }

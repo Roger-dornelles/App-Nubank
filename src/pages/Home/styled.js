@@ -21,23 +21,38 @@ export const CardPage = styled.div`
             display:flex;
             justify-content:space-between;
 
-            .title{
-                margin-top:17px;
+            .user-info{
+                margin-top:10px;
+                margin-left: 10px;
                 padding:5px;
                 display:flex;
                 flex-direction:column;
                 
                 span{
-                    font-size:45px;
+                    font-size:50px;
+                    cursor:pointer;
+                    
+
+                    a{
+                        color: #fcfcfc;  
+
+                    }
+                }
+                h3{
+                    margin-top:-10px
                 }
                 p{
+                    margin-top:10px;
                     font-size:17px;
                     line-height:20px;
                 }
                 > button{
-                    width:50%;
+                    margin-top:10px;
+                    font-size: 17px;
+                    width:0;
                     border:none;
-                    background-color: #ebebeb;
+                    background-color:#6d1c95;
+                    color: #fcfcfc; 
                     cursor:pointer;
                 }
             }
@@ -140,6 +155,7 @@ export const CardPage = styled.div`
             border:1px solid #dddddd;
             background-color: #ffffff;
             margin-bottom:35px;
+            padding:10px 0;
 
             &:hover{
                 box-shadow:2px 2px 10px #909090;
@@ -208,6 +224,7 @@ export const CardPage = styled.div`
                         color:white;
                         font-size:16px;
                         margin-bottom:17px;
+                        margin-top:12px;
 
                         &:hover{
                             box-shadow:0px 2px 7px #6b676b;
@@ -232,6 +249,13 @@ export const CardPage = styled.div`
             display:flex;
             flex-direction:column;
             height:100%;
+
+            .user-info{
+                align-items: flex-start;
+                p{
+                    text-align:left;
+                }
+            }
 
             .menu {
                 width:100%;              
@@ -321,7 +345,7 @@ export const CardPage = styled.div`
                 display:flex;
                 justify-content:space-between;
 
-                .title{
+                .user-info{
                     padding:12px;
                     display:flex;
                     flex-direction:column;

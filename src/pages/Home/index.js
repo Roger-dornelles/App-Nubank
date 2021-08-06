@@ -1,8 +1,11 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
+import Cookies from 'js-cookie';
 import  { Link } from 'react-router-dom';
 import {useSelector} from 'react-redux';
 
 import { CardPage } from './styled';
+
+import api from '../../api';
 
 import { 
     FaUserCircle,
@@ -21,11 +24,19 @@ import {
 
 const Home = ()=>{
 
-    const name = useSelector(state=>state.usuario.name);
-    const newName = useSelector(state=>state.usuario.name);
-
     const [warnings,setWarnings] =useState('');
     const [openMenu,setOpenMenu] = useState(false);
+    const [name, setName] = useState('');
+
+    useEffect(()=>{
+        let token = Cookies.get('token');
+
+        const userName = async()=>{
+            let json = await api.info(token);
+             setName(json.name);
+        }
+        userName();
+    },[name])
         
     const handleLogout = ()=>{
         doLogout();
@@ -54,9 +65,9 @@ const Home = ()=>{
             <div className="container">
                 <div className="menu">
 
-                    <div className="title">
-                        <span><FaUserCircle /></span>
-                        <h3>Ola, {newName || name}</h3>
+                    <div className="user-info">
+                        <span><Link to="/UserInfo"><FaUserCircle /></Link></span>
+                        <h3>Ola, {name}</h3>
                         <p>Disponivel em Conta <br/>
                             R$ 897,21
                         </p>

@@ -7,6 +7,7 @@ const initialState = {
     email: '',
     password:'',
     newCpf:'',
+    newPass:''
 
 };
 
@@ -34,6 +35,11 @@ const UserReducer = (state=initialState, action) => {
 
         case "USER_NAME":
             return{ ...state,name:action.payload.userName}
+        break;
+
+        case "CONFIRM_PASS":
+            return {...state, newPass:action.payload.password};
+        break;
     }
 
     return state;
